@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-// Frontend API_BASE'i dinamik yapıyoruz (Telefon üzerinden de bağlanabilmek için)
+// Frontend API_BASE'i dinamik yapıyoruz (Localhost veya Canlı Sunucu)
 const API_BASE = window.location.hostname === 'localhost' 
   ? 'http://localhost:3001/api' 
-  : `http://${window.location.hostname}:3001/api`;
+  : 'https://seaday.onrender.com/api';
 
 function App() {
   const [view, setView] = useState('login'); // login, home, beach
